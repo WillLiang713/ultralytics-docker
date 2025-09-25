@@ -27,8 +27,10 @@ COPY requirements.txt .
 
 # 安装Python依赖
 RUN if [ "$USE_CHINA_MIRROR" = "true" ]; then \
+        pip install --no-cache-dir torch torchvision --index-url https://mirrors.nju.edu.cn/pytorch/whl/cu118 && \
         pip install --no-cache-dir -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt; \
     else \
+        pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cu118 && \
         pip install --no-cache-dir -r requirements.txt; \
     fi
 
