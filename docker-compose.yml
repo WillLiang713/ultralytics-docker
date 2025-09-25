@@ -1,0 +1,13 @@
+services:
+  ultralytics:
+    build: .
+    container_name: ultralytics-docker
+    volumes:
+      - .:/app
+      - ./datasets:/datasets
+    working_dir: /app
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
