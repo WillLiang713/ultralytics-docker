@@ -60,3 +60,5 @@ checkpoints/
 .cache/
 *.cache
 .cache-dir
+
+output_results
