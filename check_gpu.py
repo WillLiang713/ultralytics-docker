@@ -15,8 +15,8 @@ if torch.cuda.is_available():
     
     gpu_tensor = test_tensor.cuda()
     print(f"Test tensor on GPU: {gpu_tensor.device}")
-    print("✅ GPU working correctly!")
+    print("✅ GPU 正在工作中!")
 else:
-    print("❌ No GPU available, using CPU only")
+    print("❌ 未检测到GPU, 只有CPU正在工作")
 
 print("\n=== Detection Complete ===")
