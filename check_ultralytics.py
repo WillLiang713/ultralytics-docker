@@ -1,18 +1,18 @@
 import torch
 from ultralytics import YOLO
 
-print("=== Ultralytics GPU Detection ===")
+print("=== Ultralytics GPU 检测 ===")
 
 # 检查PyTorch GPU
-print(f"PyTorch version: {torch.__version__}")
-print(f"CUDA available: {torch.cuda.is_available()}")
+print(f"PyTorch 版本: {torch.__version__}")
+print(f"CUDA 可用: {torch.cuda.is_available()}")
 
 if torch.cuda.is_available():
-    print(f"GPU count: {torch.cuda.device_count()}")
-    print(f"GPU name: {torch.cuda.get_device_name(0)}")
+    print(f"GPU 数量: {torch.cuda.device_count()}")
+    print(f"GPU 名称: {torch.cuda.get_device_name(0)}")
 
 # 检查Ultralytics
-print(f"\nUltralytics version: {YOLO.__module__}")
+print(f"\nUltralytics 版本: {YOLO.__module__}")
 
 # 创建一个简单的YOLO模型实例来测试
 try:
@@ -38,4 +38,4 @@ try:
 except Exception as e:
     print(f"❌ 测试失败: {e}")
 
-print("\n=== Ultralytics Detection Complete ===")
+print("\n=== Ultralytics 检测完成 ===")
